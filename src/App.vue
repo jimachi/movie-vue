@@ -13,11 +13,10 @@
         <img width="200" :src=movie.Poster>
       </li>
     </ul> -->
-    <div v-for="movie in movies.Search" :class="card" :key="movie">
-      <img :src=movie.Poster :alt=movie.Title>
-      <div class="container">
-        <h4><b>{{ movie.Title }}</b></h4>
-      </div>
+    <div v-for="movie in movies.Search" class="card" :key="movie">
+      <img :src=movie.Poster :alt=movie.Title class="image">
+      <p class="title">{{ movie.Title }}</p>
+      <p class="content">Year: {{ movie.Year }}</p>
     </div>
     
     <!-- <img width="200" :src=showPoster alt=""> -->
@@ -59,22 +58,38 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
+body {
   background-color: #ededed;
 }
-
+img, p {
+  margin: 0;
+  padding: 0;
+}
+p {
+  font-size: 100%;
+  line-height: 1;
+}
 .card {
-  box-shadow:0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  width: 40%;
+  display: inline-block;
+  width: 300px;
+  margin: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px #ccc;
 }
-img {
-  width: 250px;
+.image {
+  width: 200px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
 }
-.container {
-  padding: 2px 16px;
+.title {
+  font-size: 150%;
+  margin: 10px;
+  color: #444;
 }
-.card:hover {
-  box-shadow:0 8px 16px rgba(0, 0, 0, 0.2);
+.content {
+  padding: 10px;
+  color: #666;
 }
 </style>

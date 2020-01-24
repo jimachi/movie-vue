@@ -5,14 +5,6 @@
     <input type="text" v-model="searchText">
     <button @click="searchMovies">検索</button>
     <br>
-    <!-- <ul v-if="movies">
-      <li v-for="movie in movies.Search" :key="movie">
-        {{ movie.Title }}
-        {{ movie.Year }}
-        {{ movie.Type }}
-        <img width="200" :src=movie.Poster>
-      </li>
-    </ul> -->
     <div v-for="movie in movies.Search" class="card" :key="movie">
       <img :src=movie.Poster :alt=movie.Title class="image">
       <p class="title">{{ movie.Title }}</p>

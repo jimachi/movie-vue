@@ -1,14 +1,8 @@
 <template>
-  <div>
-    <nav>
-      <ul>
-        <li class="logo" ><a href="#">TOP</a></li>
-        <li class="nav-menu" ><a href="#">New</a></li>
-        <li class="nav-menu"><a href="#">Contact</a></li>
-        <li class="nav-menu"><a href="#">About</a></li>
-      </ul>
-    </nav>
-  </div>
+  <header class="header">
+    <h1>Search Movie</h1>
+  </header>
+  
 </template>
 
 <script>
@@ -17,22 +11,17 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-ul {
-    list-style-type: none;
+<style scoped>
+.header {
+  width: 100%;
+}
+h1 {
     margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: #333333;
-    li {
-      float: left;
-      a {
-        display: block;
-        color: #ffffff;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-    }
+    width: 100%;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 45px;
+    color: #ffffff;
+    background-color: #333333;
+    text-align: center;
 }
 </style>

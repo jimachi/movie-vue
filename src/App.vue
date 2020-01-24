@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import "normalize.css";
 import axios from "axios"
 import Header from "./components/Header"
 
@@ -57,7 +58,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 body {
   background-color: #ededed;
 }
@@ -69,24 +70,28 @@ p {
   font-size: 100%;
   line-height: 1;
 }
+#app {
+  width: 100%;
+}
 .card {
   display: inline-block;
-  width: 300px;
+  width: 250px;
   margin: 20px;
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 0 3px 6px #ccc;
 }
 .image {
-  width: 200px;
+  width: 250px;
   height: 100%;
   object-fit: cover;
   border-radius: 5px 5px 0 0;
 }
 .title {
-  font-size: 150%;
   margin: 10px;
   color: #444;
+  font-size: 150%;
+  text-align: center;
 }
 .content {
   padding: 10px;

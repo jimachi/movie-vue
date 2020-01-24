@@ -10,8 +10,6 @@
       <p class="title">{{ movie.Title }}</p>
       <p class="content">Year: {{ movie.Year }}</p>
     </div>
-    
-    <!-- <img width="200" :src=showPoster alt=""> -->
   </div>
 </template>
 
